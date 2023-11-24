@@ -1,0 +1,13 @@
+﻿Console.Write("Укажите размер массива: ");
+int n = Convert.ToInt32(Console.ReadLine());
+Lib.Class1 m = new Lib.Class1(n);
+Console.Write("Напишите элементы массива\n");
+string[] str = new string[n];
+for(int i=0; i<n; i++) str[i] = Console.ReadLine();
+m.Input(ref m.arr, str);
+Console.WriteLine("Max - ");
+foreach(int item in m.Max()) Console.WriteLine(item);
+Console.WriteLine("Min - ");
+foreach(int item in m.Min()) Console.WriteLine(item);
+Console.WriteLine("Sum - ");
+foreach(int item in m.Sum()) Console.WriteLine(item);
